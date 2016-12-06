@@ -29,8 +29,10 @@ ActiveRecord::Schema.define(version: 20161206005453) do
     t.string   "last_name"
     t.string   "email"
     t.string   "username"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "password_digest"
+    t.string   "password_confirmation"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
   end
 
   add_foreign_key "tweets", "users"

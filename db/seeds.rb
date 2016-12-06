@@ -14,6 +14,8 @@
 											last_name: last_name,
 											username: "#{first_name[0]}" + last_name,
 											email: "#{first_name[0]}" + last_name + "@example.com")
+	user.password = 'password'
+	user.save
 	5.times do 
 		Tweet.create(msg: Faker::Lorem.paragraph, likes: 0, user_id: user.id)
 	end
